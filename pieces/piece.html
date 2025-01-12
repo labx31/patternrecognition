@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <title>Pattern Recognition</title>
+    <style>
+      .piece-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+      }
+      .artwork-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+      }
+        .artwork-header h1 {
+          margin-right: 1rem
+        }
+      .artwork-container {
+        margin-bottom: 1rem;
+        width: 800px; /* set a max width for the artwork container */
+        max-height: 600px; /* set a max height for the artwork container */
+      }
+        .artwork-container > div { /* target the direct child of the artwork container */
+            width: 100% !important;
+            height: 100% !important;
+        }
+        .artwork-container > div > svg {
+          display: block;
+          max-height: 600px;
+        }
+      .statement-container {
+        max-width: 700px;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        background-color: #2a2a2a;
+        border-radius: 4px;
+      }
+        .container {
+          width: 90%;
+          max-width: 1000px;
+        }
+      .refresh-button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #444;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 0;
+      }
+      .refresh-button:hover {
+        background-color: #555;
+      }
+      .back-button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #333;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+      }
+       .back-button:hover {
+        background-color: #444;
+      }
+    </style>
+</head>
+<body>
+    <div class="container piece-container">
+      <div class="artwork-header">
+        <h1 id="piece-title"></h1>
+        <button class="refresh-button" onclick="refreshPiece()">Refresh</button>
+      </div>
+        <div class="artwork-container" id="artwork-container"></div>
+        <div class="statement-container" id="statement-container"></div>
+        <a class="back-button" href="../index.html">Back to Gallery</a>
+    </div>
+  <script>
+      function refreshPiece() {
+        // This function will be overridden in individual piece files
+        console.log("Refresh button clicked, but no refresh logic is implemented here");
+      }
+  </script>
+</body>
+</html>
